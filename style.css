@@ -26,18 +26,16 @@
 
 /* ##### ROOT ##### */
 :root {
-	--color-red: #f64a4a;
-	--color-neon-green: #a4ffaf;
-	--color-orange: #fb7c58;
-	--color-yellow: #f8cd65;
-	--color-gray: #817d92;
-	--color-dark-gray: #24232c;
-	--color-dark-gray-alt: #18171f;
-	--color-gray-alt: #e6e5ea;
+	--color-dark-green: #071306;
+	--color-green: #34942f;
+	--color-light-green: #a8e3a5;
+	--color-white: #f4f4f4;
+	--color-dark: #252725;
 
-	--font-size-normal: 1rem;
-	--font-size-medium: 1.5rem;
-	--font-size-large: 2rem;
+	--font-size-small: 1rem;
+	--font-size-normal: 1.125rem;
+	--font-size-medium: 1.25rem;
+	--font-size-large: 1.5rem;
 }
 * {
 	box-sizing: border-box;

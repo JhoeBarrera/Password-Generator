@@ -1,4 +1,4 @@
-const checkboxes = document.querySelectorAll(".app__input-checkbox");
+const checkboxes = document.querySelectorAll(".password-generator__input-checkbox");
 
 const passwordRangeInput = document.getElementById("passwordRangeInput");
 const lowercaseOptionInput = document.getElementById("lowercaseOptionInput");

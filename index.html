@@ -13,58 +13,77 @@
 		<title>Password Generator App</title>
 	</head>
 	<body>
-		<div class="app container">
-			<div class="app__title">Password Generator</div>
-			<div>
-				<div class="app-head">
-					<div class="app-head__password-value" id="passwordValueTxt"></div>
-					<button class="app-head__copy-btn" id="copyPasswordBtn">
-						<img src="assets/images/icon-copy.svg" />
-					</button>
+		<div class="container">
+			<div class="app">
+				<div class="password-overview">
+					<div class="password-overview__container">
+						<div id="passwordValueTxt" class="password-overview__password-value"></div>
+						<button id="copyPasswordBtn" class="password-overview__copy-btn">
+							<img src="assets/images/icon-copy.svg" />
+						</button>
+					</div>
+					<p class="password-overview__strength">
+						Nivel de seguridad:
+						<span id="passwordStrengthTxt" class="password-overview__strength-value"></span>
+					</p>
 				</div>
-				<form class="app-form">
-					<div class="app-form__input">
-						<label for="passwordRangeInput"
-							>Character Length <span id="passwordLengthTxt"></span
+				<form class="password-generator">
+					<div class="password-generator__password-length">
+						<label for="passwordRangeInput" class="password-generator__label"
+							>Longitud de la contreseña
+							<span id="passwordLengthTxt" class="password-generator__length-value"></span
 						></label>
 						<input
 							type="range"
-							class="app__input-range"
 							id="passwordRangeInput"
-							min="1"
+							class="password-generator__input-range"
+							min="5"
 							max="20"
 							value="10"
 						/>
 					</div>
-					<div class="app-form__input">
-						<label for="lowercaseOptionInput">Include Lowercase Letters</label>
-						<input type="checkbox" class="app__input-checkbox" id="lowercaseOptionInput" checked />
+					<div class="password-generator__lowercase-option">
+						<label for="lowercaseOptionInput" class="password-generator__label"
+							>Incluir minúsculas</label
+						>
+						<input
+							type="checkbox"
+							id="lowercaseOptionInput"
+							class="password-generator__input-checkbox"
+							checked
+						/>
 					</div>
-					<div class="app-form__input">
-						<label for="uppercaseOptionInput">Include Uppercase Letters</label>
-						<input type="checkbox" class="app__input-checkbox" id="uppercaseOptionInput" checked />
+					<div class="password-generator__uppercase-option">
+						<label for="uppercaseOptionInput" class="password-generator-label"
+							>Incluir mayúsculas</label
+						>
+						<input
+							type="checkbox"
+							id="uppercaseOptionInput"
+							class="password-generator__input-checkbox"
+							checked
+						/>
 					</div>
-					<div class="app-form__input">
-						<label for="numbersOptionInput">Include Numbers</label>
-						<input type="checkbox" class="app__input-checkbox" id="numbersOptionInput" checked />
+					<div class="password-generator__numbers-option">
+						<label for="numbersOptionInput" class="password-generator-label">Incluir números</label>
+						<input
+							type="checkbox"
+							id="numbersOptionInput"
+							class="password-generator__input-checkbox"
+							checked
+						/>
 					</div>
-					<div class="app-form__input">
-						<label for="symbolsOptionInput">Include Symbols</label>
-						<input type="checkbox" class="app__input-checkbox" id="symbolsOptionInput" />
+					<div class="password-generator__symbols-checkbox">
+						<label for="symbolsOptionInput" class="password-generator-label"
+							>Incluir símbolos</label
+						>
+						<input
+							type="checkbox"
+							id="symbolsOptionInput"
+							class="password-generator__input-checkbox"
+						/>
 					</div>
-					<div class="app__strength">
-						<div class="app__strength-title">Strength</div>
-						<div>
-							<div id="passwordStrengthTxt"></div>
-							<div class="app__bars">
-								<span class="app__bars-item"></span><span class="app__bars-item"></span
-								><span class="app__bars-item"></span><span class="app__bars-item"></span>
-							</div>
-						</div>
-					</div>
-					<button class="app-form__button" id="generatePasswordBtn">
-						Generate <img src="assets/images/icon-arrow-right.svg" />
-					</button>
+					<button id="generatePasswordBtn" class="password-generator__button">Generar</button>
 				</form>
 			</div>
 		</div>

@@ -11,6 +11,7 @@ const passwordValueTxt = document.getElementById("passwordValueTxt");
 const passwordStrengthTxt = document.getElementById("passwordStrengthTxt");
 
 const generatePasswordBtn = document.getElementById("generatePasswordBtn");
+const copyPasswordBtn = document.getElementById("copyPasswordBtn");
 
 function printData(objTxt, txt) {
 	objTxt.textContent = txt;
@@ -55,11 +56,26 @@ function checkStrength(text) {
 	zxcvbnts.core.zxcvbnOptions.setOptions(options);
 	let score = zxcvbnts.core.zxcvbn(text).score;
 
-	if (score === 0) return "too guessable";
-	if (score === 1) return "very guessable";
-	if (score === 2) return "somewhat guessable";
-	if (score === 3) return "safely unguessable";
-	if (score === 4) return "very unguessable";
+	if (score === 0) {
+		passwordStrengthTxt.style.color = "#8794D9";
+		return "Muy fácil";
+	}
+	if (score === 1) {
+		passwordStrengthTxt.style.color = "#87D9D4";
+		return "Fácil";
+	}
+	if (score === 2) {
+		passwordStrengthTxt.style.color = "#8CD987";
+		return "Normal";
+	}
+	if (score === 3) {
+		passwordStrengthTxt.style.color = "#D9C287";
+		return "Díficil";
+	}
+	if (score === 4) {
+		passwordStrengthTxt.style.color = "#D98787";
+		return "Muy difícil";
+	}
 }
 
 checkboxes.forEach((checkbox) => {
@@ -102,4 +118,9 @@ generatePasswordBtn.addEventListener("click", (e) => {
 		)
 	);
 	printData(passwordStrengthTxt, checkStrength(passwordValueTxt.textContent));
+});
+
+copyPasswordBtn.addEventListener("click", () => {
+	navigator.clipboard.writeText(passwordValueTxt.textContent);
+	alert(`Contraseña copiado: ${passwordValueTxt.textContent}`);
 });

@@ -23,7 +23,7 @@
 						</button>
 					</div>
 					<p class="password-overview__strength">
-						Nivel de seguridad:
+						Seguridad:
 						<span id="passwordStrengthTxt" class="password-overview__strength-value"></span>
 					</p>
 				</div>
@@ -43,45 +43,47 @@
 						/>
 					</div>
 					<div class="password-generator__lowercase-option">
-						<label for="lowercaseOptionInput" class="password-generator__label"
-							>Incluir minúsculas</label
-						>
-						<input
-							type="checkbox"
-							id="lowercaseOptionInput"
-							class="password-generator__input-checkbox"
-							checked
-						/>
+						<span class="password-generator__label">Incluir minúsculas</span>
+						<label class="toggle"
+							><input
+								type="checkbox"
+								id="lowercaseOptionInput"
+								class="password-generator__input-checkbox toggle__checkbox"
+								checked />
+							<span class="toggle__slider"></span
+						></label>
 					</div>
 					<div class="password-generator__uppercase-option">
-						<label for="uppercaseOptionInput" class="password-generator-label"
-							>Incluir mayúsculas</label
-						>
-						<input
-							type="checkbox"
-							id="uppercaseOptionInput"
-							class="password-generator__input-checkbox"
-							checked
-						/>
+						<span class="password-generator__label">Incluir mayúsculas</span>
+						<label class="toggle"
+							><input
+								type="checkbox"
+								id="uppercaseOptionInput"
+								class="password-generator__input-checkbox toggle__checkbox"
+								checked />
+							<span class="toggle__slider"></span
+						></label>
 					</div>
 					<div class="password-generator__numbers-option">
-						<label for="numbersOptionInput" class="password-generator-label">Incluir números</label>
-						<input
-							type="checkbox"
-							id="numbersOptionInput"
-							class="password-generator__input-checkbox"
-							checked
-						/>
+						<span class="password-generator__label">Incluir números</span>
+						<label class="toggle"
+							><input
+								type="checkbox"
+								id="numbersOptionInput"
+								class="password-generator__input-checkbox toggle__checkbox"
+								checked />
+							<span class="toggle__slider"></span
+						></label>
 					</div>
 					<div class="password-generator__symbols-checkbox">
-						<label for="symbolsOptionInput" class="password-generator-label"
-							>Incluir símbolos</label
-						>
-						<input
-							type="checkbox"
-							id="symbolsOptionInput"
-							class="password-generator__input-checkbox"
-						/>
+						<span class="password-generator__label">Incluir símbolos</span>
+						<label class="toggle"
+							><input
+								type="checkbox"
+								id="symbolsOptionInput"
+								class="password-generator__input-checkbox toggle__checkbox" />
+							<span class="toggle__slider"></span
+						></label>
 					</div>
 					<button id="generatePasswordBtn" class="password-generator__button">Generar</button>
 				</form>
